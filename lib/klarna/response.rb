@@ -16,6 +16,10 @@ module Klarna
     def error?
       @code >= 300
     end
+    
+    def code
+      @code
+    end
 
     def [](index)
       http_response.send("[]", index)
